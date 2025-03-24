@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio n Video</title>
+  </head>
+  <body>
+    <h1>Audio Player Example</h1>
+
+    <!-- Simple audio player with controls -->
+    <audio controls>
+      <source src="audio.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Audio with autoplay and loop -->
+    <audio controls autoplay loop>
+      <source src="audio.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Audio with multiple formats -->
+    <audio controls>
+      <source src="audio.ogg" type="audio/ogg" />
+      <source src="audio.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <h1>Video Player Example</h1>
+
+    <!-- Simple video player with controls -->
+    <video controls width="600">
+      <source src="video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Video with autoplay, loop, and muted -->
+    <video controls autoplay loop muted width="600">
+      <source src="video.mp4" type="video/mp4" />
+      <source src="video.ogg" type="video/ogg" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Video with a poster image -->
+    <video controls width="600" poster="poster.jpg">
+      <source src="video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </body>
+</html>

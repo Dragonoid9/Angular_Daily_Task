@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Complete Form Example</h1>
+
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+      <label for="name">Full Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        placeholder="Enter your full name"
+      />
+      <br /><br />
+
+      <label for="email">Email Address:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="Enter your email address"
+      />
+      <br /><br />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        placeholder="Enter your password"
+      />
+      <br /><br />
+
+      <label for="phone">Phone Number:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Enter your phone number"
+      />
+      <br /><br />
+
+      <label for="age">Age:</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        min="1"
+        max="100"
+        required
+        placeholder="Enter your age"
+      />
+      <br /><br />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
+      <br /><br />
+
+      <label for="profilePic">Upload Profile Picture:</label>
+      <input type="file" id="profilePic" name="profilePic" />
+      <br /><br />
+
+      <label for="bio">Short Bio:</label>
+      <textarea
+        id="bio"
+        name="bio"
+        rows="4"
+        cols="50"
+        placeholder="Tell us about yourself"
+      ></textarea>
+      <br /><br />
+
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="usa">United States</option>
+        <option value="canada">Canada</option>
+        <option value="uk">United Kingdom</option>
+        <option value="australia">Australia</option>
+      </select>
+      <br /><br />
+
+      <fieldset>
+        <legend>Gender:</legend>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female" />
+      </fieldset>
+      <br /><br />
+
+      <fieldset>
+        <legend>Hobbies:</legend>
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="reading" name="hobbies" value="reading" />
+        <label for="traveling">Traveling</label>
+        <input
+          type="checkbox"
+          id="traveling"
+          name="hobbies"
+          value="traveling"
+        />
+        <label for="gaming">Gaming</label>
+        <input type="checkbox" id="gaming" name="hobbies" value="gaming" />
+      </fieldset>
+      <br /><br />
+
+      <label for="website">Website:</label>
+      <input
+        type="url"
+        id="website"
+        name="website"
+        placeholder="https://example.com"
+      />
+      <br /><br />
+
+      <input type="hidden" id="userId" name="userId" value="12345" />
+
+      <button type="submit">Submit</button>
+
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>

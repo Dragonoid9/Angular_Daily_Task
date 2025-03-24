@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+  <table>
+    <caption>Complex Table</caption>
+</table>
+
+<!-- Outer Table -->
+<table border="1" aria-label="Main Product Sales Data">
+    <caption id="table-caption">Main Product Sales Overview</caption>
+    
+    <!-- Table Header -->
+    <thead>
+        <tr>
+            <th colspan="2">Product</th>
+            <th rowspan="2">Total Sales</th>
+            <th colspan="2">Region A</th>
+        </tr>
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>North</th>
+            <th>South</th>
+        </tr>
+    </thead>
+    
+    <!-- Table Body -->
+    <tbody>
+        <tr>
+            <td colspan="2" aria-labelledby="table-caption">Product 1</td>
+            <td>500</td>
+            <td>250</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <td rowspan="2" aria-label="Product 2">Product 2</td>
+            <td>300</td>
+            <td>200</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td colspan="2">Product 2 (Second Row)</td>
+            <td>50</td>
+            <td></td> <!-- Empty cell -->
+        </tr>
+        
+        <!-- Nested Table -->
+        <tr>
+            <td colspan="5" style="text-align:center;">
+                <table border="1" aria-label="Region B Sales">
+                    <caption>Region B Sales</caption>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Product</th>
+                            <th>Sales</th>
+                            <th colspan="2">Region B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Product 3</td>
+                            <td>400</td>
+                            <td>200</td>
+                            <td>100</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" aria-label="Product 4">Product 4</td>
+                            <td>100</td>
+                            <td>50</td>
+                            <td colspan="2">50</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Product 4 (Second Row)</td>
+                            <td>20</td>
+                            <td></td> <!-- Empty cell -->
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

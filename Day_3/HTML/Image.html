@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image</title>
+  </head>
+  <body>
+    <!-- Adding an image from a URL -->
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ggWl4UKuhaNseApwmJpYvUdn1BpkVCnLopBLIZUmLyqKh1vwZ7wUUGFnGVCxlI_3-Xg&usqp=CAU"
+      alt="Image from online"
+      width="500"
+      height="300"
+    />
+
+    <!-- Adding an image from local file system -->
+    <img
+      src="/Daily_Task/Day_3/images/itachi.jpg"
+      alt="Itachi Image"
+      width="500"
+      height="300"
+    />
+
+    <!-- Adding an image as a background (CSS style method) -->
+    <div
+      style="
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ggWl4UKuhaNseApwmJpYvUdn1BpkVCnLopBLIZUmLyqKh1vwZ7wUUGFnGVCxlI_3-Xg&usqp=CAU');
+        width: 500px;
+        height: 300px;
+        opacity: 0.5;
+      "
+    >
+      <p>Content over background image</p>
+    </div>
+
+    <!-- Adding an image with link (image as a clickable link) -->
+    <a href="https://www.google.com">
+      <img
+        src="/Daily_Task/Day_3/images/google-icon.svg"
+        alt="Logo"
+        width="100"
+        height="100"
+      />
+    </a>
+  </body>
+</html>
