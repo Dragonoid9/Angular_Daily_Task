@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Blend Modes</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f4f4f4;
+        margin: 0;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .container {
+        display: flex;
+        gap: 20px;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: #3498db;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+      }
+
+      .overlay {
+        background-image: url("https://via.placeholder.com/200"); /* Add a placeholder image */
+        background-size: cover;
+        color: white;
+      }
+
+      /* Different blend modes */
+      .normal {
+        mix-blend-mode: normal;
+      }
+      .multiply {
+        mix-blend-mode: multiply;
+      }
+      .screen {
+        mix-blend-mode: screen;
+      }
+      .overlay-blend {
+        mix-blend-mode: overlay;
+      }
+      .darken {
+        mix-blend-mode: darken;
+      }
+      .lighten {
+        mix-blend-mode: lighten;
+      }
+      .difference {
+        mix-blend-mode: difference;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Blend Modes</h1>
+    <div class="container">
+      <div class="box normal">Normal</div>
+      <div class="box multiply">Multiply</div>
+      <div class="box screen">Screen</div>
+      <div class="box overlay-blend">Overlay</div>
+      <div class="box darken">Darken</div>
+      <div class="box lighten">Lighten</div>
+      <div class="box difference">Difference</div>
+    </div>
+
+    <h2>Blend Mode with Image</h2>
+    <div class="container">
+      <div class="box overlay overlay-blend">Overlay with Image</div>
+      <div class="box difference overlay">Difference with Image</div>
+    </div>
+  </body>
+</html>

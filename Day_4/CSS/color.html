@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Color</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        color: red; /* Named color */
+      }
+
+      p {
+        color: rgb(0, 128, 0); /* RGB color (green) */
+      }
+
+      .hex-color {
+        color: #3498db; /* HEX color (blue) */
+      }
+
+      .hsl-color {
+        color: hsl(120, 100%, 25%); /* HSL color (green) */
+      }
+
+      .rgba-color {
+        color: rgba(255, 0, 0, 0.5); /* RGBA color (semi-transparent red) */
+      }
+
+      .variable-color {
+        --main-color: #f39c12; /* Custom property */
+        color: var(--main-color);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Heading in Red (Named Color)</h1>
+    <p>This paragraph is green (RGB).</p>
+    <p class="hex-color">This paragraph is blue (HEX).</p>
+    <p class="hsl-color">This paragraph is dark green (HSL).</p>
+    <p class="rgba-color">This paragraph is semi-transparent red (RGBA).</p>
+    <p class="variable-color">This paragraph uses a custom variable color.</p>
+  </body>
+</html>

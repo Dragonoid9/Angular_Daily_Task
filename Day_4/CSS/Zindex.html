@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Z-Index and Stacking Contexts</title>
+    <style>
+      /* Parent creates a new stacking context */
+      .parent {
+        position: relative;
+        z-index: 1;
+        width: 400px;
+        height: 400px;
+        background-color: lightblue;
+      }
+
+      /* Child creates a new stacking context */
+      .child {
+        position: relative;
+        z-index: 2; /* Stacked above the parent */
+        width: 200px;
+        height: 200px;
+        background-color: lightcoral;
+      }
+
+      /* Another sibling element outside of the parent stack */
+      .sibling {
+        position: relative;
+        z-index: 3;
+        width: 200px;
+        height: 200px;
+        background-color: lightgreen;
+      }
+
+      /* An element with a transform property will create a stacking context */
+      .transformed {
+        transform: rotate(45deg);
+        z-index: 4;
+        width: 200px;
+        height: 200px;
+        background-color: lightyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+      <div class="sibling"></div>
+    </div>
+
+    <div class="transformed"></div>
+  </body>
+</html>

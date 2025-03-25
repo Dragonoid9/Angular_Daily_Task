@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Inheritance</title>
+    <style>
+      /* Base styles for the page */
+      body {
+        font-family: Arial, sans-serif; /* Inherited by all child elements */
+        color: darkslategray; /* Inherited by all child elements */
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 2em; /* Explicitly set, not inherited */
+      }
+
+      p {
+        font-size: inherit; /* Inherits font-size from the body */
+      }
+
+      .highlight {
+        color: red; /* This does not inherit from body */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      This heading has a different font-size and color due to explicit styles.
+    </h1>
+    <p>This paragraph inherits font-size and color from the body.</p>
+    <p class="highlight">This text is red because of the class "highlight".</p>
+  </body>
+</html>

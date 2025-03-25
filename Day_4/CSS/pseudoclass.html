@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Pseudo-classes Example</title>
+    <style>
+      /* Styling for a normal link */
+      a:link {
+        color: blue;
+        text-decoration: none;
+      }
+
+      /* Styling for a visited link */
+      a:visited {
+        color: purple;
+      }
+
+      /* Styling for link when hovered */
+      a:hover {
+        color: red;
+        text-decoration: underline;
+      }
+
+      /* Styling for link when active (clicked) */
+      a:active {
+        color: orange;
+      }
+
+      /* Styling for focus on input fields */
+      input:focus {
+        border-color: green;
+        outline: none;
+      }
+
+      /* Styling for disabled button */
+      button:disabled {
+        background-color: lightgray;
+        cursor: not-allowed;
+      }
+
+      /* Styling for checked input (checkbox) */
+      input:checked {
+        background-color: yellow;
+      }
+
+      /* Styling for first child element */
+      ul li:first-child {
+        font-weight: bold;
+        color: teal;
+      }
+
+      /* Styling for last child element */
+      ul li:last-child {
+        color: red;
+      }
+
+      /* Styling for nth-child elements */
+      ul li:nth-child(odd) {
+        background-color: lightblue;
+      }
+
+      ul li:nth-child(even) {
+        background-color: lightgreen;
+      }
+
+      /* Styling for elements not matching a selector */
+      p:not(.special) {
+        color: gray;
+      }
+
+      /* Styling for elements with no children (empty elements) */
+      div:empty {
+        background-color: lightyellow;
+        color: darkgray;
+      }
+
+      /* Styling for elements that are the first of their type */
+      p:first-of-type {
+        font-size: 1.5em;
+        color: darkblue;
+      }
+
+      /* Styling for elements that are the last of their type */
+      p:last-of-type {
+        font-size: 1.5em;
+        color: darkgreen;
+      }
+
+      /* Styling for root element */
+      :root {
+        --main-color: coral;
+      }
+
+      /* Applying the root color */
+      body {
+        background-color: var(--main-color);
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Styling for the nth-of-type */
+      section:nth-of-type(2) {
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Pseudo-classes Demo</h1>
+
+    <p>
+      This is a paragraph with a <span class="special">special class</span>.
+    </p>
+
+    <a href="#">Visit our site</a>
+
+    <input type="text" placeholder="Focus on me" />
+    <button disabled>Can't click me</button>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+
+    <div></div>
+    <!-- Empty div -->
+
+    <section>
+      <p>Section 1</p>
+    </section>
+    <section>
+      <p>Section 2</p>
+    </section>
+    <section>
+      <p>Section 3</p>
+    </section>
+  </body>
+</html>

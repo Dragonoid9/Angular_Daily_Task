@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Lists</title>
+    <style>
+      /* Style for the unordered list */
+      ul {
+        list-style-type: square; /* Square bullet points */
+        padding-left: 20px;
+        margin: 20px 0;
+        font-family: Arial, sans-serif;
+      }
+
+      ul li {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      /* Style for the ordered list */
+      ol {
+        list-style-type: lower-alpha; /* Lowercase alphabetic numbering */
+        padding-left: 20px;
+        margin: 20px 0;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      ol li {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      /* Custom bullet using ::before */
+      ul li::before {
+        content: "👉 "; /* Adds an emoji before list item */
+      }
+
+      /* Nested list style */
+      ul ul {
+        list-style-type: circle;
+      }
+
+      /* Custom list image */
+      ul.custom-image {
+        list-style-image: url("https://via.placeholder.com/15"); /* Custom bullet image */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Styled Lists Example</h1>
+
+    <h2>Unordered List</h2>
+    <ul>
+      <li>Item one</li>
+      <li>
+        Item two
+        <ul>
+          <li>Sub-item one</li>
+          <li>Sub-item two</li>
+        </ul>
+      </li>
+      <li>Item three</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+    <ol>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ol>
+
+    <h2>Custom Image List</h2>
+    <ul class="custom-image">
+      <li>Custom Bullet 1</li>
+      <li>Custom Bullet 2</li>
+      <li>Custom Bullet 3</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timing Functions</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: #3498db;
+        transition: background-color 0.5s ease, transform 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        margin: 10px;
+      }
+
+      .box:hover {
+        background-color: #e74c3c;
+        transform: scale(1.2);
+      }
+
+      /* Different timing functions */
+      .linear {
+        transition-timing-function: linear;
+      }
+      .ease {
+        transition-timing-function: ease;
+      }
+      .ease-in {
+        transition-timing-function: ease-in;
+      }
+      .ease-out {
+        transition-timing-function: ease-out;
+      }
+      .ease-in-out {
+        transition-timing-function: ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box linear">Linear Timing</div>
+
+    <div class="box ease">Ease Timing</div>
+
+    <div class="box ease-in">Ease-In Timing</div>
+
+    <div class="box ease-out">Ease-Out Timing</div>
+
+    <div class="box ease-in-out">Ease-In-Out Timing</div>
+  </body>
+</html>

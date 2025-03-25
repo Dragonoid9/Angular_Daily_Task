@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Filters</title>
+    <style>
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .filter-blur {
+        background-color: #3498db;
+        filter: blur(5px);
+      }
+
+      .filter-brightness {
+        background-color: #e74c3c;
+        filter: brightness(1.5);
+      }
+
+      .filter-contrast {
+        background-color: #9b59b6;
+        filter: contrast(2);
+      }
+
+      .filter-grayscale {
+        background-color: #2ecc71;
+        filter: grayscale(1);
+      }
+
+      .filter-hue-rotate {
+        background-color: #f39c12;
+        filter: hue-rotate(90deg);
+      }
+
+      .filter-invert {
+        background-color: #e74c3c;
+        filter: invert(1);
+      }
+
+      .filter-opacity {
+        background-color: #8e44ad;
+        filter: opacity(0.5);
+      }
+
+      .filter-saturate {
+        background-color: #f1c40f;
+        filter: saturate(2);
+      }
+
+      .filter-sepia {
+        background-color: #34495e;
+        filter: sepia(1);
+      }
+
+      .filter-drop-shadow {
+        background-color: #1abc9c;
+        filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box filter-blur">Blur</div>
+    <div class="box filter-brightness">Brightness</div>
+    <div class="box filter-contrast">Contrast</div>
+    <div class="box filter-grayscale">Grayscale</div>
+    <div class="box filter-hue-rotate">Hue Rotate</div>
+    <div class="box filter-invert">Invert</div>
+    <div class="box filter-opacity">Opacity</div>
+    <div class="box filter-saturate">Saturate</div>
+    <div class="box filter-sepia">Sepia</div>
+    <div class="box filter-drop-shadow">Drop Shadow</div>
+  </body>
+</html>

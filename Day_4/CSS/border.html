@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Border Example</title>
+    <style>
+      /* Solid Border */
+      .solid-border {
+        border: 5px solid blue;
+        padding: 20px;
+        margin: 10px;
+      }
+
+      /* Dashed Border */
+      .dashed-border {
+        border: 3px dashed green;
+        padding: 20px;
+        margin: 10px;
+      }
+
+      /* Dotted Border */
+      .dotted-border {
+        border: 2px dotted red;
+        padding: 20px;
+        margin: 10px;
+      }
+
+      /* Border Radius */
+      .rounded-border {
+        border: 5px solid purple;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 10px;
+      }
+
+      /* Individual Borders */
+      .individual-borders {
+        border-top: 5px solid black;
+        border-right: 3px dashed gray;
+        border-bottom: 2px dotted yellow;
+        border-left: 4px solid orange;
+        padding: 20px;
+        margin: 10px;
+      }
+
+      /* Border Image */
+      .border-image {
+        border: 10px solid transparent;
+        border-image: url("https://via.placeholder.com/50") 30 round;
+        padding: 20px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Border Examples</h1>
+
+    <div class="solid-border">This div has a solid blue border.</div>
+    <div class="dashed-border">This div has a dashed green border.</div>
+    <div class="dotted-border">This div has a dotted red border.</div>
+    <div class="rounded-border">
+      This div has rounded corners with a purple border.
+    </div>
+    <div class="individual-borders">
+      This div has individual borders on each side.
+    </div>
+    <div class="border-image">This div has a border image.</div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Example</title>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+
+      .box {
+        width: 300px;
+        height: 300px;
+        background: url("https://via.placeholder.com/300") no-repeat center
+          center/cover;
+        background-color: rgba(
+          52,
+          152,
+          219,
+          0.5
+        ); /* Semi-transparent background color */
+        border: 2px solid #2980b9;
+        margin: 50px auto;
+        position: relative;
+        background-attachment: fixed; /* Fixed background */
+      }
+
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="text">Background Styling</div>
+    </div>
+  </body>
+</html>

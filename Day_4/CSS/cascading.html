@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cascading</title>
+    <style>
+      /* 1. Element Selector (Specificity: 1) */
+      p {
+        color: red;
+      }
+
+      /* 2. Class Selector (Specificity: 10) */
+      .highlight {
+        color: blue;
+      }
+
+      /* 3. ID Selector (Specificity: 100) */
+      #special {
+        color: green;
+      }
+
+      /* 4. Inline Style (Specificity: 1000) */
+      #inline-example {
+        color: orange !important;
+      }
+
+      /* 5. Source Order */
+      p {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is a red paragraph.</p>
+    <p id="special">This is a green paragraph because of the ID selector.</p>
+    <p class="highlight">
+      This is a blue paragraph because of the class selector.
+    </p>
+    <p id="inline-example">This text is orange because of the inline style.</p>
+    <p>This text is purple because of the source order rule.</p>
+  </body>
+</html>
