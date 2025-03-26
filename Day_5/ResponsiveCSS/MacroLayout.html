@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Macro Layout</title>
+    <style>
+      /* Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      /* Header Styles */
+      header {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+      }
+
+      nav ul li {
+        margin: 0 1rem;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
+
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      /* Main Content Styles */
+      .main-content {
+        display: flex;
+        padding: 2rem;
+      }
+
+      .sidebar {
+        flex: 1;
+        background-color: #f4f4f4;
+        padding: 1rem;
+        margin-right: 1rem;
+      }
+
+      .content {
+        flex: 3;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      /* Responsive Layout with Media Queries */
+
+      /* Tablets and below (600px and below) */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.5rem;
+        }
+
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .main-content {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          margin-right: 0;
+          margin-bottom: 1rem;
+          flex: unset;
+        }
+
+        .content {
+          flex: unset;
+        }
+      }
+
+      /* Mobile (480px and below) */
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.2rem;
+        }
+
+        nav ul {
+          font-size: 0.9rem;
+        }
+
+        .sidebar,
+        .content {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main-content">
+      <aside class="sidebar">Sidebar Content</aside>
+      <section class="content">Main Content</section>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 My Website</p>
+    </footer>
+  </body>
+</html>
