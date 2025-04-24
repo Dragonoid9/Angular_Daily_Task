@@ -1,0 +1,11 @@
+<h1>This is the main appS</h1>
+<div style="padding: 20px">
+  <h2>App Component</h2>
+  <button (click)="toggleComponent()">Toggle Component</button>
+  <button (click)="changeInput()">Change Input</button>
+  <app-lifecycle-test
+    *ngIf="showComponent"
+    [testInput]="inputValue"
+  ></app-lifecycle-test>
+</div>
+<!-- <app-lifecycle-test></app-lifecycle-test> -->
