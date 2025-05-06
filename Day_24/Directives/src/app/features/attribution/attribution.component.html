@@ -1,0 +1,19 @@
+<div>
+  <p>attribution works!</p>
+  <hr />
+  <div [ngClass]="{ active: isActive, inactive: !isActive }">
+    This is the hidden section only activated with the toggle button.
+  </div>
+  <div
+    [ngStyle]="{
+      backgroundColor: isActive ? 'lightblue' : 'lightpink',
+      color: isActive ? 'darkblue' : 'darkred',
+      fontWeight: isActive ? 'bold' : 'normal',
+      padding: '10px',
+      marginTop: '10px'
+    }"
+  >
+    This section uses ngStyle to apply inline styles.
+  </div>
+  <button (click)="toggleActive()">Toggle</button>
+</div>

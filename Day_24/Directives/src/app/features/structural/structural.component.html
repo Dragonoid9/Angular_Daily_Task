@@ -1,0 +1,41 @@
+<div>
+  <p>Using * for the Conditional</p>
+  <div *ngIf="a > b">{{ a }} is greater than {{ b }}</div>
+
+  <div *ngIf="b > a">{{ b }} is greater than {{ a }}</div>
+  <hr />
+  <p>Using &#64; for the Conditional</p>
+
+  @if(a>b){
+  {{ a }} is greater than {{ b }}
+  }@else{
+  {{ b }} is greater than {{ a }}
+  }
+  <hr />
+  <p>Using * for the ForLoop in the items</p>
+  <div *ngFor="let item of items">
+    {{ item }}
+  </div>
+  <hr />
+  <p>Using &#64; for the ForLoop</p>
+  @for(item of items; track items){
+  <div>{{ item }}</div>
+  }
+  <hr />
+  <p>Using * for the Switch in the items</p>
+  <div [ngSwitch]="item">
+    <div *ngSwitchCase="'first'">This is first item.</div>
+    <div *ngSwitchCase="'second'">This is second item.</div>
+    <div *ngSwitchDefault>This is the default item.</div>
+  </div>
+  <hr />
+  <p>Using &#64; for the Switch</p>
+  @switch(item){ @case("first"){
+  <p>This item is first.</p>
+  } @case("second") {
+  <p>This item is second.</p>
+  } @default{
+  <p>This is the default item.</p>
+  } }
+  <hr />
+</div>

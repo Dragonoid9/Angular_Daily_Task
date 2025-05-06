@@ -1,0 +1,53 @@
+<div>
+  <h1>Form Module</h1>
+
+  <form #tempform="ngForm" (ngSubmit)="submitform(tempform)">
+    <div>
+      <label for="name">Name</label>
+      <span *ngIf="nameCtrl.invalid && nameCtrl.touched" style="color: red">
+        - Name is required
+      </span>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        [(ngModel)]="user.name"
+        #nameCtrl="ngModel"
+        required
+      />
+    </div>
+    <br />
+    <div>
+      <label for="email">Email</label>
+      <span *ngIf="emailCtrl.invalid && emailCtrl.dirty" style="color: red">
+        - Email is required
+      </span>
+      <span
+        *ngIf="emailCtrl.errors?.['email'] && emailCtrl.dirty"
+        style="color: red"
+      >
+        - Invalid email format
+      </span>
+      <input
+        type="text"
+        name="email"
+        id="email"
+        [(ngModel)]="user.email"
+        #emailCtrl="ngModel"
+        email
+        required
+      />
+    </div>
+    <br />
+    <div>
+      <button type="submit" [disabled]="tempform.invalid">Submit</button>
+    </div>
+    <br />
+    <div>
+      <button (click)="resetForm(tempform)">Reset</button>
+    </div>
+    <div>
+      <button (click)="loadFormValue(tempform)">Load Value</button>
+    </div>
+  </form>
+</div>

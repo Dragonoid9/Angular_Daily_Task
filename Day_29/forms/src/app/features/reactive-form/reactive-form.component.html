@@ -1,0 +1,15 @@
+<div>
+  <h2>Reactive Form Module</h2>
+  <form [formGroup]="reactiveform">
+    <label>Name : </label>
+    <input type="text" formControlName="name" /><br />
+    <label>Gender: </label>
+    <input type="radio" formControlName="gender" value="male" />
+    <label> Male</label>
+    <input type="radio" formControlName="gender" value="female" />
+    <label>Female</label><br />
+    <label>Email: </label>
+    <input type="email" formControlName="email" /><br />
+    <button (click)="submitForm()">Submit</button>
+  </form>
+</div>
