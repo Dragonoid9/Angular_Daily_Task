@@ -1,0 +1,15 @@
+<div>
+  <h1>Pipelines:Date</h1>
+  <p>{{ today }}</p>
+  <p>{{ today | date }}</p>
+  <p>{{ today | date : "shortDate" }}</p>
+  <p>{{ today | date : "MM/dd/yyyy" }}</p>
+  <p>{{ today | date : "yyyy:MM:dd" }}</p>
+  <p>{{ today | date : "yyyy/MM/dd" }}</p>
+</div>
+<div>
+  <h1>Text manipulation:Pipelines</h1>
+  <p id="originalText">{{ text }}</p>
+  <p id="upperText">Uppercase : {{ text | uppercase }}</p>
+  <p id="lowerText">Lowercase : {{ text | lowercase }}</p>
+</div>

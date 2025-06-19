@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design</title>
+    <style>
+      /* Default styles (desktop) */
+      .container {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+      }
+
+      .item {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        line-height: 200px;
+      }
+
+      /* Styles for tablets and smaller screens */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .item {
+          width: 100%; /* Full width on smaller screens */
+          margin: 10px 0;
+        }
+      }
+
+      /* Styles for mobile devices */
+      @media (max-width: 480px) {
+        .item {
+          font-size: 14px; /* Smaller text */
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+  </body>
+</html>

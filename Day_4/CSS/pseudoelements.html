@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Pseudo-elements Example</title>
+    <style>
+      /* Styling for the ::before pseudo-element */
+      h1::before {
+        content: "✨ "; /* Adds a star before the heading */
+        color: gold;
+      }
+
+      /* Styling for the ::after pseudo-element */
+      h1::after {
+        content: " 🌟"; /* Adds a star after the heading */
+        color: gold;
+      }
+
+      /* Styling for the ::first-letter pseudo-element */
+      p::first-letter {
+        font-size: 3em;
+        color: red; /* First letter is larger and red */
+        font-weight: bold;
+      }
+
+      /* Styling for the ::first-line pseudo-element */
+      p::first-line {
+        font-weight: bold;
+        color: blue; /* First line is bold and blue */
+      }
+
+      /* Styling for the ::placeholder pseudo-element */
+      input::placeholder {
+        color: gray;
+        font-style: italic; /* Placeholder text is italic and gray */
+      }
+
+      /* Styling for the ::cue pseudo-element */
+      ::cue {
+        color: white;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.7
+        ); /* Subtitles or captions with black background */
+        font-size: 1.5em;
+      }
+
+      /* Styling for the ::marker pseudo-element */
+      ul::marker {
+        content: "✔ "; /* Custom green checkmark bullet */
+        color: green;
+        font-size: 1.5em; /* Make the marker (bullet) larger */
+      }
+
+      /* Additional styling for elements */
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1.2em;
+        line-height: 1.5;
+        max-width: 600px;
+        margin: 20px auto;
+      }
+
+      input {
+        display: block;
+        margin: 20px auto;
+        padding: 10px;
+        font-size: 1em;
+        width: 80%;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0;
+        max-width: 600px;
+        margin: 20px auto;
+      }
+
+      li {
+        font-size: 1.1em;
+        margin: 10px 0;
+      }
+
+      video {
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        margin: 30px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to CSS Pseudo-elements</h1>
+
+    <!-- Example of ::before and ::after -->
+    <p>
+      This paragraph demonstrates the use of <strong>::before</strong> and
+      <strong>::after</strong> pseudo-elements. The content is styled with stars
+      before and after the heading.
+    </p>
+
+    <!-- Example of ::first-letter and ::first-line -->
+    <p>
+      This paragraph demonstrates the use of the
+      <strong>::first-letter</strong> and
+      <strong>::first-line</strong> pseudo-elements. The first letter is red and
+      large, while the first line of text is bold and blue.
+    </p>
+
+    <!-- Example of ::placeholder -->
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" placeholder="John Doe" />
+
+    <!-- Example of ::cue (used for captions in video) -->
+    <video controls>
+      <source src="movie.mp4" type="video/mp4" />
+      <track
+        src="subtitles_en.vtt"
+        kind="subtitles"
+        srclang="en"
+        label="English"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Example of ::marker -->
+    <ul>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ul>
+  </body>
+</html>

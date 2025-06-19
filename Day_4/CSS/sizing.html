@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Sizing Example</title>
+    <style>
+      /* Box model example */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Makes width and height include padding and border */
+      }
+
+      /* Universal styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      /* Container with flexbox */
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      /* Flexbox items with different flex properties */
+      .item {
+        width: 30%; /* Set a basic width */
+        padding: 20px;
+        background-color: #d3e0ea;
+        text-align: center;
+        border: 2px solid #4a90e2;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 200px; /* Initial size before growth */
+      }
+
+      /* Grid layout */
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr; /* 3 columns with different proportions */
+        grid-gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      .grid-item {
+        background-color: #a2d5f2;
+        padding: 20px;
+        border: 2px solid #0077b6;
+        text-align: center;
+      }
+
+      /* Sizing with absolute units */
+      .box-absolute {
+        width: 300px;
+        height: 150px;
+        background-color: #f9c74f;
+        margin-bottom: 30px;
+      }
+
+      /* Sizing with viewport units */
+      .viewport-box {
+        width: 50vw; /* 50% of the viewport width */
+        height: 50vh; /* 50% of the viewport height */
+        background-color: #90be6d;
+        margin-bottom: 30px;
+      }
+
+      /* Image with object-fit */
+      .image-container {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures image covers the container without stretching */
+      }
+
+      /* Using percentages */
+      .percent-box {
+        width: 80%;
+        height: 200px;
+        background-color: #f1faee;
+        margin-bottom: 30px;
+      }
+
+      /* Media queries for responsiveness */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .item {
+          width: 100%;
+        }
+
+        .grid-container {
+          grid-template-columns: 1fr; /* Stack grid items on smaller screens */
+        }
+
+        .viewport-box {
+          width: 80vw; /* Adjust viewport box width on smaller screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Sizing Example</h1>
+
+    <!-- Flexbox container with items -->
+    <div class="container">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+
+    <!-- Grid layout -->
+    <div class="grid-container">
+      <div class="grid-item">Grid Item 1</div>
+      <div class="grid-item">Grid Item 2</div>
+      <div class="grid-item">Grid Item 3</div>
+    </div>
+
+    <!-- Absolute width and height -->
+    <div class="box-absolute">
+      This is a box with absolute width and height (300px by 150px).
+    </div>
+
+    <!-- Viewport width and height -->
+    <div class="viewport-box">
+      This box is sized with viewport units (50vw, 50vh).
+    </div>
+
+    <!-- Image container with object-fit -->
+    <div class="image-container">
+      <img src="./../../Day_3/images/itachi.jpg" alt="Placeholder Image" />
+    </div>
+
+    <!-- Percentage based sizing -->
+    <div class="percent-box">
+      This box is 80% of the parent container's width.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<div>
+  <p>admin works!</p>
+  <button (click)="goHome()">Home</button>
+
+  <h2>Refresh Tokens</h2>
+  <ul>
+    <li *ngFor="let token of refreshTokens">
+      Access Token: {{ token.accessToken }} <br />
+      Refresh Token: {{ token.refreshToken }}
+    </li>
+  </ul>
+</div>

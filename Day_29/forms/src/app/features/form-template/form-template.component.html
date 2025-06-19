@@ -1,0 +1,8 @@
+<div>
+  <form #myform="ngForm">
+    <input type="text" name="name" id="" ngModel /><br />
+    <input type="number" name="mobileNumber" id="" ngModel /><br />
+    <button>Submit</button>
+  </form>
+  <h2>{{ myform.value | json }}</h2>
+</div>

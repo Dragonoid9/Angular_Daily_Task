@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Gradients</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 50px;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+      }
+
+      /* Linear Gradient (Top to Bottom) */
+      .linear-gradient-box {
+        background: linear-gradient(to bottom, red, yellow);
+      }
+
+      /* Linear Gradient (45 degrees) */
+      .linear-gradient-45deg {
+        background: linear-gradient(45deg, blue, green, purple);
+      }
+
+      /* Radial Gradient (Circle) */
+      .radial-gradient-box {
+        background: radial-gradient(circle, red, yellow);
+      }
+
+      /* Radial Gradient (Ellipse) */
+      .radial-gradient-ellipse {
+        background: radial-gradient(ellipse at top left, red, yellow, green);
+      }
+
+      /* Conic Gradient */
+      .conic-gradient-box {
+        background: conic-gradient(red, yellow, green);
+      }
+
+      /* Transparent Linear Gradient */
+      .transparent-linear-gradient {
+        background: linear-gradient(
+          to right,
+          rgba(255, 0, 0, 0),
+          rgba(255, 0, 0, 1)
+        );
+      }
+
+      /* Multiple Gradients */
+      .multiple-gradients {
+        background: linear-gradient(to bottom, red, yellow),
+          linear-gradient(to right, blue, green);
+      }
+
+      /* Using calc() with Gradients */
+      .calc-gradient-box {
+        background: linear-gradient(to right, red, yellow, green);
+        height: calc(200px + 20px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box linear-gradient-box">Linear Gradient (Top to Bottom)</div>
+
+    <div class="box linear-gradient-45deg">Linear Gradient (45deg)</div>
+
+    <div class="box radial-gradient-box">Radial Gradient (Circle)</div>
+
+    <div class="box radial-gradient-ellipse">Radial Gradient (Ellipse)</div>
+
+    <div class="box conic-gradient-box">Conic Gradient</div>
+
+    <div class="box transparent-linear-gradient">
+      Transparent Linear Gradient
+    </div>
+
+    <div class="box multiple-gradients">Multiple Gradients</div>
+
+    <div class="box calc-gradient-box">Calc Gradient Box</div>
+  </body>
+</html>

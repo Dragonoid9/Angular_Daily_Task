@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Example</title>
+    <style>
+      /* Basic focus styles */
+      input:focus,
+      textarea:focus,
+      button:focus {
+        outline: none;
+        border: 2px solid #008cba;
+        background-color: #f0f8ff;
+        color: #00008b;
+      }
+
+      /* Focus styles with box-shadow */
+      input:focus {
+        box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.5); /* Blue glow effect */
+      }
+
+      /* Custom focus for non-form elements */
+      div:focus {
+        outline: 3px solid green;
+      }
+
+      /* Focus-within: style the parent when any child gets focus */
+      .form-group:focus-within {
+        background-color: #e0f7fa;
+      }
+
+      /* Focus styles with hover state */
+      button:hover:focus {
+        background-color: #008cba;
+        color: white;
+      }
+
+      /* Style for the button */
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+      }
+
+      /* Style for the form group */
+      .form-group {
+        padding: 20px;
+        margin: 20px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+      }
+
+      /* Focusable div */
+      div[tabindex="0"] {
+        padding: 20px;
+        margin: 10px;
+        border: 2px dashed #888;
+        cursor: pointer;
+      }
+
+      /* Styling form elements */
+      input,
+      textarea {
+        padding: 10px;
+        font-size: 16px;
+        margin: 10px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Focus Pseudo-Class Example</h1>
+
+    <!-- Form with input fields -->
+    <div class="form-group">
+      <label for="inputField">Focus on Input:</label>
+      <input type="text" id="inputField" placeholder="Click or Tab to focus" />
+    </div>
+
+    <div class="form-group">
+      <label for="textarea">Focus on Textarea:</label>
+      <textarea id="textarea" placeholder="Click or Tab to focus"></textarea>
+    </div>
+
+    <button>Click Me</button>
+
+    <h2>Focusable Div</h2>
+    <div tabindex="0">Click or Tab to focus on this div!</div>
+
+    <h2>Focus-within Example</h2>
+    <div class="form-group">
+      <label for="inputFieldWithin">Focus on Input Inside a Group:</label>
+      <input
+        type="text"
+        id="inputFieldWithin"
+        placeholder="Focus will highlight the group"
+      />
+    </div>
+
+    <script>
+      // JavaScript to set focus on button when page loads
+      window.onload = function () {
+        document.querySelector("button").focus();
+      };
+    </script>
+  </body>
+</html>

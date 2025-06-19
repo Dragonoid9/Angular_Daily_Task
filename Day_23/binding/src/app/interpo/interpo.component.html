@@ -1,0 +1,21 @@
+<h1>{{ interpodata }}</h1>
+<hr />
+<h1>This one contains the property binding.</h1>
+
+<div>
+  <a [href]="propertybin" target="_blank">Google</a>
+</div>
+<hr />
+<div><button (click)="sayHello()">Click Me</button></div>
+<hr />
+<div>
+  <h1>Data Binding from Two ways.</h1>
+  <input [(ngModel)]="username" placeholder="Enter your name" />
+  <p>Hello, {{ username? 'Admin' }}!</p>
+</div>
+<hr />
+<div>
+  <h1>This one is Template Reference Variable</h1>
+  <input #myInput />
+  <button (click)="log(myInput.value)">Log</button>
+</div>

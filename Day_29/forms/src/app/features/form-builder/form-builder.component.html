@@ -1,0 +1,52 @@
+<div>
+  <h2>Form using Form Builder</h2>
+  <form [formGroup]="formbuild" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" type="text" formControlName="name" />
+    </div>
+
+    <div>
+      <label for="gender">Gender:</label>
+      <select id="gender" formControlName="gender">
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" type="email" formControlName="email" />
+    </div>
+
+    <div formGroupName="address">
+      <div>
+        <label for="street">Street:</label>
+        <input id="street" type="text" formControlName="street" />
+      </div>
+
+      <div>
+        <label for="city">City:</label>
+        <input id="city" type="text" formControlName="city" />
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="formbuild.invalid">Submit</button>
+  </form>
+</div>
+
+<!-- Issue in this part :: form-builder.component.html:20 ERROR RuntimeError:
+NG01101: Expected async validator to return Promise or Observable. Are you using
+a synchronous validator where an async validator is expected? Find more at
+https://angular.io/errors/NG01101 
+
+if i use on submit function on the button .
+
+need to see why it persist in the ngSubmit 
+
+issue is caused by validator in the componenet
+
+i have  email: ['', Validators.required, Validators.email], which causes issue.
+
+need to have email: ['', [Validators.required, Validators.email]]-->

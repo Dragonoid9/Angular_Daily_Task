@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Functions</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 50px;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+
+      /* Basic box styles */
+      .box {
+        width: 200px;
+        height: 100px;
+        margin: 20px;
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+      }
+
+      /* Functional Selectors Example (attr()) */
+      .box-attr::after {
+        content: attr(data-info);
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        font-size: 16px;
+        color: darkblue;
+      }
+
+      .box-attr {
+        position: relative;
+      }
+
+      /* Skewing Example */
+      .skew-box {
+        background-color: lightcoral;
+        transform: skew(20deg, 10deg);
+      }
+
+      .skew-box-x {
+        background-color: lightgreen;
+        transform: skewX(30deg);
+      }
+
+      .skew-box-y {
+        background-color: lightseagreen;
+        transform: skewY(30deg);
+      }
+
+      /* Perspective Example */
+      .perspective-container {
+        perspective: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+      }
+
+      .perspective-box {
+        width: 200px;
+        height: 200px;
+        background-color: lightseagreen;
+        transform: rotateY(45deg);
+      }
+
+      /* Using calc() */
+      .calc-box {
+        background-color: lightyellow;
+        width: calc(100% - 100px);
+        height: 150px;
+      }
+
+      /* Using var() */
+      :root {
+        --primary-color: #3498db;
+        --padding: 20px;
+      }
+
+      .var-box {
+        background-color: var(--primary-color);
+        padding: var(--padding);
+        color: white;
+        width: 200px;
+        text-align: center;
+      }
+
+      /* Using translate() */
+      .translate-box {
+        background-color: lightpink;
+        transform: translate(50px, 100px);
+      }
+
+      /* Using rotate() */
+      .rotate-box {
+        background-color: lightgoldenrodyellow;
+        transform: rotate(45deg);
+      }
+
+      /* Combining transforms: scale and rotate */
+      .scale-box {
+        background-color: lightgray;
+        transform: scale(1.5) rotate(15deg);
+      }
+
+      /* Using perspective with a 3D transformation */
+      .perspective-3d {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        transform: rotateX(30deg) translateZ(100px);
+      }
+
+      /* Using clamp() */
+      .clamp-box {
+        width: clamp(200px, 50vw, 600px);
+        height: 200px;
+        background-color: lightgreen;
+      }
+
+      /* Using min() and max() */
+      .min-max-box {
+        width: max(300px, 50%);
+        height: min(300px, 30vh);
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Functional Selector Example (attr()) -->
+    <div class="box box-attr" data-info="This is dynamic content!">
+      Box with attr()
+    </div>
+
+    <!-- Skewing Example -->
+    <div class="box skew-box">Skewed Box</div>
+
+    <div class="box skew-box-x">Skewed X</div>
+
+    <div class="box skew-box-y">Skewed Y</div>
+
+    <!-- Perspective Example -->
+    <div class="perspective-container">
+      <div class="perspective-box">3D Perspective Box</div>
+    </div>
+
+    <!-- Using calc() -->
+    <div class="box calc-box">Width: calc(100% - 100px)</div>
+
+    <!-- Using var() -->
+    <div class="box var-box">Box with var()</div>
+
+    <!-- Using translate() -->
+    <div class="box translate-box">Translated Box</div>
+
+    <!-- Using rotate() -->
+    <div class="box rotate-box">Rotated Box</div>
+
+    <!-- Combining transforms: scale and rotate -->
+    <div class="box scale-box">Scaled & Rotated Box</div>
+
+    <!-- Using perspective with a 3D transformation -->
+    <div class="box perspective-3d">3D Transformed Box</div>
+
+    <!-- Using clamp() -->
+    <div class="box clamp-box">Width with clamp()</div>
+
+    <!-- Using min() and max() -->
+    <div class="box min-max-box">
+      Width: max(300px, 50%) and Height: min(300px, 30vh)
+    </div>
+  </body>
+</html>

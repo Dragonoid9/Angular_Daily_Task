@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <style>
+      /* Basic Selectors */
+
+      p {
+        color: blue; /* All <p> tags will be blue */
+      }
+
+      #header {
+        background-color: lightgray; /* The element with id="header" will have a light gray background */
+      }
+
+      .button {
+        padding: 10px 20px;
+        background-color: green; /* All elements with class="button" will have the specified styles */
+      }
+
+      /* Grouping Selectors */
+      h1,
+      h2,
+      h3 {
+        font-family: Arial, sans-serif; /* Apply the same font to all <h1>, <h2>, and <h3> elements */
+      }
+
+      /* Combinator Selectors */
+
+      article p {
+        color: red; /* All <p> elements inside <article> will be red */
+      }
+
+      ul > li {
+        list-style-type: none; /* Direct <li> children of <ul> will have no list style */
+      }
+
+      h1 + p {
+        margin-top: 0; /* First <p> immediately after <h1> will have no top margin */
+      }
+
+      h1 ~ p {
+        color: orange; /* All <p> siblings of <h1> will be orange */
+      }
+
+      /* Attribute Selectors */
+
+      input[type="text"] {
+        border: 2px solid blue; /* <input> elements with type="text" will have a blue border */
+      }
+
+      a[href*="example.com"] {
+        color: purple; /* <a> elements with href containing "example.com" will be purple */
+      }
+
+      a[href^="https"] {
+        color: green; /* <a> elements with href starting with "https" will be green */
+      }
+
+      a[href$=".pdf"] {
+        color: red; /* <a> elements with href ending with ".pdf" will be red */
+      }
+
+      /* Pseudo-Classes */
+
+      button:hover {
+        background-color: yellow; /* Button will have yellow background when hovered */
+      }
+
+      ul li:first-child {
+        font-weight: bold; /* The first <li> element inside a <ul> will be bold */
+      }
+
+      ul li:last-child {
+        color: green; /* The last <li> element inside a <ul> will be green */
+      }
+
+      ul li:nth-child(odd) {
+        background-color: #f0f0f0; /* Odd <li> elements will have a light gray background */
+      }
+
+      p:not(.highlight) {
+        color: gray; /* <p> elements that do not have the class "highlight" will be gray */
+      }
+
+      /* Pseudo-Elements */
+
+      p::before {
+        content: "Note: "; /* Adds "Note: " before every <p> element */
+        font-weight: bold;
+      }
+
+      p::after {
+        content: "."; /* Adds a period after every <p> element */
+      }
+
+      p::first-letter {
+        font-size: 2em;
+        font-weight: bold; /* First letter of <p> will be larger and bold */
+      }
+
+      /* Universal Selector */
+      * {
+        margin: 0;
+        padding: 0; /* Resets margin and padding for all elements */
+      }
+    </style>
+  </head>
+  <body>
+    <body>
+      <h1 id="header">This is an H1 Header</h1>
+      <br />
+      <h2>This is an H2 Header</h2>
+      <br />
+      <h3>This is an H3 Header</h3>
+      <br />
+      <p>This paragraph has a blue color due to the element selector.</p>
+      <br />
+      <article>
+        <p>This paragraph is red because it's inside an article.</p>
+      </article>
+      <br />
+      <ul>
+        <li>First list item (bold due to first-child selector)</li>
+        <li>Second list item</li>
+        <li>Third list item (green because it's the last child)</li>
+      </ul>
+      <br />
+      <button class="button">Click me!</button>
+      <br />
+      <br />
+      <input type="text" placeholder="Text input" />
+      <input type="password" placeholder="Password input" />
+      <br />
+      <br />
+      <a href="https://www.example.com">Visit Example.com</a><br />
+      <br />
+      <a href="https://www.example.com/file.pdf">Download PDF</a>
+      <br />
+      <br />
+      <p class="highlight">This paragraph is highlighted.</p>
+      <br />
+      <p>This paragraph does not have the "highlight" class, so it’s gray.</p>
+      <br />
+
+      <h1>Title for Article</h1>
+      <p>
+        This is a paragraph after a heading, which has no margin-top due to the
+        adjacent sibling selector.
+      </p>
+      <p>
+        This is another paragraph sibling of the first one, which will be orange
+        due to the general sibling selector.
+      </p>
+    </body>
+  </body>
+</html>

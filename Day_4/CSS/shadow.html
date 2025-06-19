@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Shadows Example</title>
+    <style>
+      /* Box shadow */
+      .box-shadow {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+        margin: 20px;
+      }
+
+      /* Text shadow */
+      .text-shadow {
+        font-size: 2em;
+        color: darkblue;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        margin: 20px;
+      }
+
+      /* Box shadow with inset */
+      .box-shadow-inset {
+        width: 200px;
+        height: 200px;
+        background-color: lightgreen;
+        box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.3);
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-shadow">Text with Shadow</h1>
+    <div class="box-shadow">Box with Shadow</div>
+    <div class="box-shadow-inset">Box with Inset Shadow</div>
+  </body>
+</html>

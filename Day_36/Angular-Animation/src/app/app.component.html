@@ -1,0 +1,41 @@
+<div class="button-class">
+  <!-- app.component.html -->
+  <button
+    [@hoverEffect]="state"
+    [@clickEffect]="clickState"
+    [@doneTransition]="done"
+    (mouseenter)="state = 'hovered'"
+    (mouseleave)="state = 'default'"
+    (click)="onClick()"
+    class="submit-button"
+    [disabled]="loading || done"
+    [ngClass]="{ loading: loading, done: done }"
+  >
+    <ng-container *ngIf="!loading && !done; else loadingSpinner">
+      Submit
+    </ng-container>
+    <ng-template #loadingSpinner>
+      <ng-container *ngIf="loading; else doneTemplate">
+        <svg class="circular-loader" viewBox="0 0 36 36">
+          <path
+            class="circle-bg"
+            d="M18 2.0845
+             a 15.9155 15.9155 0 0 1 0 31.831
+             a 15.9155 15.9155 0 0 1 0 -31.831"
+          />
+          <path
+            class="circle"
+            d="M18 2.0845
+             a 15.9155 15.9155 0 0 1 0 31.831
+             a 15.9155 15.9155 0 0 1 0 -31.831"
+          />
+        </svg>
+      </ng-container>
+    </ng-template>
+    <ng-template #doneTemplate>
+      <svg class="checkmark" viewBox="0 0 24 24">
+        <path fill="none" stroke="#fff" stroke-width="2" d="M6 12l4 4L18 8" />
+      </svg>
+    </ng-template>
+  </button>
+</div>
